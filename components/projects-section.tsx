@@ -1,19 +1,18 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { motion } from "framer-motion"
-import { ExternalLink, Github, Eye } from "lucide-react"
-import Image from "next/image"
-import { useState } from "react"
-import { ProjectGalleryModal } from "./project-gallery-modal"
-import { useRouter } from "next/router"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Eye } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import { ProjectGalleryModal } from "./project-gallery-modal";
+import { useRouter } from "next/router";
 
 export function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState<any>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const projects = [
     {
@@ -29,9 +28,21 @@ export function ProjectsSection() {
         "/projects/omiday/06.png",
         "/projects/omiday/07.png",
       ],
-      technologies: ["ReactJS", "Laravel", "MySQL", "Stripe", "AWS EC2", "S3 Bucket", "MUI"],
+      technologies: [
+        "ReactJS",
+        "Laravel",
+        "MySQL",
+        "Stripe",
+        "AWS EC2",
+        "S3 Bucket",
+        "MUI",
+      ],
       liveUrl: "http://omi.day/",
-      achievements: ["90% customer feedback response rate", "Zero data loss migration", "2,000+ users migrated"],
+      achievements: [
+        "90% customer feedback response rate",
+        "Zero data loss migration",
+        "2,000+ users migrated",
+      ],
       challenges:
         "Orchestrated the migration of WordPress data to a Laravel database, including Stripe subscription data for 2,000+ users with zero data loss.",
       features: [
@@ -42,42 +53,34 @@ export function ProjectsSection() {
       ],
     },
     {
-      title: "SkimAI - Professional AI Service",
-      description:
-        "Developed AI-driven solutions to enhance employee productivity by streamlining tasks and improving operational efficiency. Conducted R&D on Strapi CRM customization for unique client requirements.",
-      images: [
-        "/projects/skimai/01.png",
-        "/projects/skimai/02.png",
-
-      ],
-      technologies: ["ReactJS", "React Toolkit", "Strapi CRM", "Stripe", "MUI"],
-      liveUrl: "https://app.skimai.com",
-      achievements: ["Enhanced productivity", "Custom CRM solutions", "Process automation"],
-      challenges:
-        "Conducted research and development (R&D) on Strapi CRM, focusing on customization to meet unique client requirements.",
-      features: [
-        "AI-powered task automation",
-        "Custom CRM integration",
-        "Employee productivity tracking",
-        "Workflow optimization",
-      ],
-    },
-    {
       title: "RenderHealth - Hospital Management",
       description:
         "Comprehensive medical facility management system for streamlining hospital services, patient records, doctor management, and overall hospital administration with focus on efficiency and accuracy.",
       images: [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        "/projects/renderhealth/01.png",
+        "/projects/renderhealth/02.png",
+        "/projects/renderhealth/03.png",
+        "/projects/renderhealth/04.png",
+        "/projects/renderhealth/05.png",
+        "/projects/renderhealth/06.png",
       ],
-      technologies: ["Laravel", "jQuery", "AWS DynamoDB", "MySQL", "Spatie", "Razorpay"],
+      technologies: [
+        "Laravel",
+        "jQuery",
+        "AWS DynamoDB",
+        "MySQL",
+        "Spatie",
+        "Razorpay",
+      ],
       githubUrl: "#",
       liveUrl: "#",
-      achievements: ["Streamlined hospital operations", "Integrated payment system", "Role-based access"],
-      challenges: "Developing new features and maintaining the existing system while ensuring seamless integration.",
+      achievements: [
+        "Streamlined hospital operations",
+        "Integrated payment system",
+        "Role-based access",
+      ],
+      challenges:
+        "Developing new features and maintaining the existing system while ensuring seamless integration.",
       features: [
         "Patient record management",
         "Doctor scheduling system",
@@ -87,21 +90,57 @@ export function ProjectsSection() {
       ],
     },
     {
+      title: "SkimAI - Professional AI Service",
+      description:
+        "Developed AI-driven solutions to enhance employee productivity by streamlining tasks and improving operational efficiency. Conducted R&D on Strapi CRM customization for unique client requirements.",
+      images: ["/projects/skimai/01.png", "/projects/skimai/02.png"],
+      technologies: ["ReactJS", "React Toolkit", "Strapi CRM", "Stripe", "MUI"],
+      liveUrl: "https://app.skimai.com",
+      achievements: [
+        "Enhanced productivity",
+        "Custom CRM solutions",
+        "Process automation",
+      ],
+      challenges:
+        "Conducted research and development (R&D) on Strapi CRM, focusing on customization to meet unique client requirements.",
+      features: [
+        "AI-powered task automation",
+        "Custom CRM integration",
+        "Employee productivity tracking",
+        "Workflow optimization",
+      ],
+    },
+
+    {
       title: "Ezlivingtrust - Attorney Services",
       description:
         "Developed comprehensive estate planning packages tailored to client needs, achieving 95% client satisfaction rate and 40% increase in referrals within the first year.",
       images: [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
+        "/projects/easylivingtrust/01.png",
+        "/projects/easylivingtrust/02.png",
       ],
-      technologies: ["Next.js", "Nest.js", "PostgreSQL", "Docker", "Amazon ECS"],
+      technologies: [
+        "Next.js",
+        "Nest.js",
+        "PostgreSQL",
+        "Docker",
+        "Amazon ECS",
+      ],
       githubUrl: "#",
-      liveUrl: "#",
-      achievements: ["95% client satisfaction", "40% increase in referrals", "Scalable architecture"],
+      liveUrl: "https://ezlivingtrust.com/",
+      achievements: [
+        "95% client satisfaction",
+        "40% increase in referrals",
+        "Scalable architecture",
+      ],
       challenges:
         "Orchestrated the migration of WordPress data to a Laravel database, including Stripe subscription data for 2,000+ users with zero data loss.",
-      features: ["Estate planning tools", "Document generation", "Client portal", "Appointment scheduling"],
+      features: [
+        "Estate planning tools",
+        "Document generation",
+        "Client portal",
+        "Appointment scheduling",
+      ],
     },
     {
       title: "Reverijobs - Job Portal",
@@ -110,36 +149,48 @@ export function ProjectsSection() {
       images: ["/projects/reveri/01.png"],
       technologies: ["Laravel", "MySQL", "Stripe Payment"],
       githubUrl: "#",
-      liveUrl: "#",
-      achievements: ["Job matching system", "Payment integration", "User-friendly interface"],
-      features: ["Advanced job search", "Company profiles", "Application tracking", "Resume builder"],
+      liveUrl: "https://www.reverijobs.com/",
+      achievements: [
+        "Job matching system",
+        "Payment integration",
+        "User-friendly interface",
+      ],
+      features: [
+        "Advanced job search",
+        "Company profiles",
+        "Application tracking",
+        "Resume builder",
+      ],
     },
     {
       title: "Kloudd - Cloud Storage",
       description:
         "Cloud storage services similar to Google Drive, offering efficient solutions for managing, sharing, and hosting files with secure and seamless file access and collaboration.",
-      images: [
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-        "/placeholder.svg?height=400&width=600",
-      ],
+      images: ["/projects/kloudd/01.png", "/projects/kloudd/02.png"],
       technologies: ["Vue.js", "Laravel", "AWS EC2", "MySQL"],
-      githubUrl: "#",
-      liveUrl: "#",
-      achievements: ["Secure file storage", "Collaboration features", "AWS integration"],
-      features: ["File upload/download", "Folder organization", "File sharing", "Version control"],
+      achievements: [
+        "Secure file storage",
+        "Collaboration features",
+        "AWS integration",
+      ],
+      features: [
+        "File upload/download",
+        "Folder organization",
+        "File sharing",
+        "Version control",
+      ],
     },
-  ]
+  ];
 
   const openProjectModal = (project: any) => {
-    setSelectedProject(project)
-    setIsModalOpen(true)
-  }
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
 
   const closeProjectModal = () => {
-    setIsModalOpen(false)
-    setSelectedProject(null)
-  }
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <section id="projects" className="py-20">
@@ -167,8 +218,9 @@ export function ProjectsSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            A showcase of my recent work across healthcare, AI, marketing, and cloud storage domains, demonstrating
-            expertise in full-stack development and modern technologies.
+            A showcase of my recent work across healthcare, AI, marketing, and
+            cloud storage domains, demonstrating expertise in full-stack
+            development and modern technologies.
           </motion.p>
         </motion.div>
 
@@ -205,14 +257,18 @@ export function ProjectsSection() {
                 <CardHeader className="flex-shrink-0">
                   <CardTitle className="flex items-center justify-between text-lg group-hover:text-primary transition-colors">
                     {project.title}
-                    <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      {/* <Button variant="ghost" size="icon" className="h-8 w-8">
-                        <Github className="h-4 w-4" />
-                      </Button> */}
-                      <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => window.open(project.liveUrl, "_blank")}>
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </div>
+                    {project.liveUrl && (
+                      <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-8 w-8"
+                          onClick={() => window.open(project.liveUrl, "_blank")}
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </Button>
+                      </div>
+                    )}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col">
@@ -222,7 +278,11 @@ export function ProjectsSection() {
 
                   <div className="flex flex-wrap gap-1 mb-4">
                     {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs">
+                      <Badge
+                        key={techIndex}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -248,7 +308,11 @@ export function ProjectsSection() {
         </div>
       </div>
 
-      <ProjectGalleryModal project={selectedProject} isOpen={isModalOpen} onClose={closeProjectModal} />
+      <ProjectGalleryModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeProjectModal}
+      />
     </section>
-  )
+  );
 }

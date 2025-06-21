@@ -17,7 +17,7 @@ export function ExperienceSection() {
         "Developing custom web applications and websites for various clients, focusing on delivering high-quality, scalable solutions. Specializing in integrating third-party APIs and maintaining robust databases to ensure seamless user experiences.",
       technologies: ["Laravel", "React.js", "Node.js", "MySQL", "AWS", "API Integration"],
       achievements: [
-        "Successfully delivered 15+ client projects on time",
+        "Successfully delivered client projects on time",
         "Achieved 100% client satisfaction with repeat business",
         "Integrated multiple third-party APIs for enhanced functionality",
         "Maintained high code quality with comprehensive documentation",
@@ -72,7 +72,7 @@ export function ExperienceSection() {
             Work Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            3+ years of professional software development experience, specializing in full-stack development, system
+            4 years of professional software development experience, specializing in full-stack development, system
             integration, and delivering scalable web solutions.
           </p>
         </motion.div>
