@@ -20,12 +20,12 @@ export function AboutSection() {
     {
       icon: <Database className="h-6 w-6" />,
       title: "Database & Cloud",
-      description: "MySQL, PostgreSQL, AWS Services, DynamoDB",
+      description: "MySQL, PostgreSQL, DynamoDB",
     },
     {
       icon: <Globe className="h-6 w-6" />,
-      title: "Full-Stack Solutions",
-      description: "End-to-end web application development",
+      title: "Tools & Integration",
+      description: "AWS Services, Docker, Git/GitHub, Stripe Payment, Razorpay",
     },
   ]
 

@@ -13,3 +13,4 @@ export function handleDownloadCV() {
   link.click();
   document.body.removeChild(link);
 }
+

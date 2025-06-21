@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react"
 import { motion } from "framer-motion"
 import { handleDownloadCV } from "@/lib/utils"
+import { socialLinks } from "@/lib/constants"
 
 export function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -180,13 +181,10 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            {[
-              { icon: Github, href: "https://github.com/KalpeshChavda1999" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/kalpesh-chavda-166a76137/" },
-              { icon: Mail, href: "mailto:kalpesh.chavda1999@gmail.com" },
-            ].map((social, index) => (
+            {socialLinks.map((social, index) => (
               <motion.div key={index} whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }}>
                 <Button
+                  key={index}
                   variant="ghost"
                   size="icon"
                   asChild

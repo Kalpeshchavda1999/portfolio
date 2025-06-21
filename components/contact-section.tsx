@@ -10,6 +10,9 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
 import { sendMail } from "@/lib/send-mail";
+import { socialLinks } from "@/lib/constants";
+
+
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -35,7 +38,7 @@ export function ContactSection() {
     try {
       // Simulate successful form submission
       console.log("Form submitted:", formData);
-    
+
       // Reset form
       const htmlContent = `
         <h2>New Contact Form Submission</h2>
@@ -52,7 +55,7 @@ export function ContactSection() {
         // text: mailText,
         html: htmlContent,
       });
-      console.log("🚀 ~ handleSubmit ~ response:", response)
+      console.log("🚀 ~ handleSubmit ~ response:", response);
       setFormData({ name: "", email: "", subject: "", message: "" });
       setSubmitMessage("Message sent successfully!");
       setSubmitError(false);
@@ -95,23 +98,6 @@ export function ContactSection() {
     },
   ];
 
-  const socialLinks = [
-    {
-      icon: <Github className="h-5 w-5" />,
-      label: "GitHub",
-      href: "https://github.com/KalpeshChavda1999",
-    },
-    {
-      icon: <Linkedin className="h-5 w-5" />,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/kalpesh-chavda-developer/",
-    },
-    {
-      icon: <Twitter className="h-5 w-5" />,
-      label: "Twitter",
-      href: "https://twitter.com/Kalpesh_Chavda_",
-    },
-  ];
 
   return (
     <section id="contact" className="py-20 bg-muted/30">
@@ -239,16 +225,16 @@ export function ContactSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors hover:shadow-md"
+                    className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors hover:shadow-md"
                   >
-                    <div className="text-primary">{info.icon}</div>
-                    <div>
+                    <div className="flex-shrink-0 text-primary mt-1">{info.icon}</div>
+                    <div className="flex-1 min-w-0">
                       <p className="font-medium">{info.label}</p>
                       <a
                         href={info.href}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-primary transition-colors break-all"
                       >
-                        {info.value}
+                          {info.value}
                       </a>
                     </div>
                   </motion.div>
@@ -261,7 +247,7 @@ export function ContactSection() {
                 <CardTitle>Follow Me</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap   gap-4">
                   {socialLinks.map((social, index) => (
                     <motion.div
                       key={index}
@@ -282,7 +268,7 @@ export function ContactSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {social.icon}
+                          <social.icon className="h-5 w-5" />
                         </a>
                       </Button>
                     </motion.div>

@@ -32,7 +32,6 @@ export function SkillsSection() {
       skills: [
         { name: "MySQL", level: 92 },
         { name: "PostgreSQL", level: 85 },
-        { name: "AWS Services", level: 88 },
         { name: "DynamoDB", level: 80 },
         { name: "Docker", level: 78 },
       ],
@@ -43,8 +42,7 @@ export function SkillsSection() {
         { name: "Git/GitHub", level: 90 },
         { name: "Stripe Payment", level: 88 },
         { name: "Razorpay", level: 85 },
-        { name: "AWS EC2/S3", level: 87 },
-        { name: "CRM Systems", level: 82 },
+        { name: "AWS Services", level: 88 },
       ],
     },
   ]
